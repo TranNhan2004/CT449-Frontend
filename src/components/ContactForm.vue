@@ -70,7 +70,13 @@ export default {
                 ),
         });
         return {
-            contactLocal: this.contact,
+            contactLocal: this.contact ? this.contact : {
+                name: "",
+                email: "",
+                address: "",
+                phone: "",
+                favorite: false,
+            },
             contactFormSchema,
         };
     },
